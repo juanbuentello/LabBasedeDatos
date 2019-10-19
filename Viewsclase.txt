@@ -1,0 +1,15 @@
+create view alumnos_info_completa as
+(
+select a.*, c.nombre
+from alumnos a
+left join carrera c on a.id_carrera = c.id_carrera
+)
+
+select *
+from alumnos_info_completa
+where nombre = 'LSTI'
+
+Hacer 5 vistas 
+1 consulta select view
+1 subconsulta normal
+1 select into
